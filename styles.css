@@ -1,0 +1,103 @@
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.platform-list {
+    list-style: none;
+    padding: 0;
+}
+
+.platform-list li {
+    margin-bottom: 10px;
+}
+
+.platform-list a {
+    color: #333;
+    text-decoration: none;
+}
+
+.platform-list a:hover {
+    text-decoration: underline;
+}
+
+.intro-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.intro-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.intro-link a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el contenido principal */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Estilos para el texto introductorio */
+.introText {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Estilos para los recuadros grandes de información */
+.infoBox {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Estilos para los gráficos y su contenedor */
+.chartsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chartRow {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.chartWrapper {
+    flex: 1;
+    max-width: 400px;
+    max-height: 300px;
+    margin: 10px;
+}
+
+.canvas-container {
+    position: relative;
+    height: 300px;
+    width: 400px;
+}
