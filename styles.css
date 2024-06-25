@@ -6,15 +6,20 @@
 /* Estilos para la barra lateral */
 .sidebar {
     width: 200px;
-    background-color: #f0f0f0;
+    background-color: #004d40;
     padding: 20px;
     border-right: 1px solid #ddd;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    transition: width 0.3s;
 }
 
 .sidebar-header {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 .platform-list {
@@ -27,12 +32,16 @@
 }
 
 .platform-list a {
-    color: #333;
+    color: #ffffff;
     text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .platform-list a:hover {
-    text-decoration: underline;
+    background-color: #26a69a;
+    text-decoration: none;
 }
 
 .intro-link {
@@ -41,7 +50,7 @@
 }
 
 .intro-link a {
-    color: #007bff;
+    color: #26a69a;
     text-decoration: none;
 }
 
@@ -52,12 +61,14 @@
 /* Estilos para el contenido principal */
 .content {
     flex: 1;
+    margin-left: 220px;
     padding: 20px;
+    transition: margin-left 0.3s;
 }
 
 /* Estilos para el texto introductorio */
 .introText {
-    background-color: #f0f0f0;
+    background-color: #e0f2f1;
     border: 1px solid #ddd;
     padding: 20px;
     margin-bottom: 20px;
@@ -65,9 +76,24 @@
     text-align: center;
 }
 
+.introText h2 {
+    color: #004d40;
+}
+
+.introText p {
+    color: #004d40;
+}
+
+.introImage {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
 /* Estilos para los recuadros grandes de información */
 .infoBox {
-    background-color: #f0f0f0;
+    background-color: #e0f2f1;
     border: 1px solid #ddd;
     padding: 20px;
     margin-bottom: 20px;
@@ -100,4 +126,13 @@
     position: relative;
     height: 300px;
     width: 400px;
+}
+
+/* Estilos adicionales para el menú lateral */
+.sidebar.active {
+    width: 100%;
+}
+
+.content.active {
+    margin-left: 100%;
 }

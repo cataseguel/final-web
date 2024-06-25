@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            window.dummyData = data;
+        });
+});
+
 // Variables globales para almacenar instancias de gráficos
 let doughnutChartInstance = null;
 let barChartInstance = null;
@@ -54,34 +62,34 @@ function loadData(platform) {
 
 // Función para mostrar la introducción
 function showIntro() {
-    // Ocultar los gráficos y la información
+    // Mostrar el texto introductorio
+    document.getElementById('introText').style.display = 'block';
+
+    // Ocultar los recuadros de información y los gráficos
     document.getElementById('titleCount').style.display = 'none';
     document.getElementById('productionsCount').style.display = 'none';
     document.getElementById('platformAverage').style.display = 'none';
     document.getElementById('platformPerMonth').style.display = 'none';
     document.querySelector('.chartsContainer').style.display = 'none';
-
-    // Mostrar el texto introductorio
-    document.getElementById('introText').style.display = 'block';
 }
 
 // Función para actualizar el recuadro de cantidad de títulos
 function updateTitleCount(platform, titleCount) {
     const titleCountElement = document.getElementById('titleCount');
     if (titleCountElement) {
-        titleCountElement.innerHTML = `<p>Títulos disponibles en ${platform}: ${titleCount}</p>`;
+        titleCountElement.innerHTML = `<p>${platform} tiene ${titleCount} títulos disponibles</p>`;
     }
 }
 
-// Función para actualizar el recuadro de cantidad de producciones generales
+// Función para actualizar el recuadro de cantidad de producciones
 function updateProductionsCount(platform, productionsCount) {
     const productionsCountElement = document.getElementById('productionsCount');
     if (productionsCountElement) {
-        productionsCountElement.innerHTML = `<p>Producciones generales en ${platform}: ${productionsCount}</p>`;
+        productionsCountElement.innerHTML = `<p>${platform} tiene ${productionsCount} producciones</p>`;
     }
 }
 
-// Función para actualizar el recuadro de promedio de plataforma
+// Función para actualizar el recuadro de promedio
 function updatePlatformAverage(platform, average) {
     const platformAverageElement = document.getElementById('platformAverage');
     if (platformAverageElement) {
